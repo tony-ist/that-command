@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "that-command",
+	"version": "${version}",
+	"name": "That Command",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/that-command/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"tony.thatcommand.ThatCommand"
+		],
+		"client": [
+			"tony.thatcommand.client.ThatCommandClient"
+		]
+	},
+	"mixins": [
+		"that-command.mixins.json",
+		{
+			"config": "that-command.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
