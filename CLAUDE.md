@@ -1,0 +1,2 @@
+- You are on Windows. Important: use only PowerShell, DO NOT use Bash. 
+- Use `gradlew.bat` to run gradle commands.

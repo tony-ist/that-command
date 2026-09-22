@@ -7,6 +7,8 @@ import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import tony.thatcommand.command.ThatSelectCommand;
+
 public class ThatCommand implements ModInitializer {
 	public static final String MOD_ID = "that-command";
 
@@ -22,6 +24,9 @@ public class ThatCommand implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+
+		ThatCommandConfig.load();
+		ThatSelectCommand.register();
 	}
 
 	public static Identifier id(String path) {
